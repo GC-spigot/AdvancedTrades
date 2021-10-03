@@ -1,0 +1,13 @@
+# AdvancedTrades by GC
+# Version: 1.0.0
+# Release date: 2021/10/08
+
+# Wiki: https://trades.advancedplugins.net
+
+# Should all vanilla trades be disabled?
+disableVanillaTrades: false
+
+# What main material should be used in vanilla trades? By default, in vanilla, villagers use EMERALD for trading.
+# Using this setting, you can change emeralds to any other material, e.g. diamonds
+# Warning: Only affects vanilla trades!
+mainTradingMaterial: EMERALD
