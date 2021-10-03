@@ -1,0 +1,65 @@
+# Configuration file for Villager Trades
+# Villagers Professions: https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/entity/Villager.Profession.html
+
+trades:
+  'exampleTrade': # Trade name, this can be anything you want
+    tradeSettings:
+      chance: 5 # Chance of villager acquiring this trade
+      requiredVillagerLevel: 'none' # Required villager level, read more at https://trades.advancedplugins.net/trades/levels
+      requiredProfession: # Required villager profession, read more at https://trades.advancedplugins.net/trades/professions
+        - 'none' # If set to none, required profession is disabled
+      requiredBiome: # Required villager's biome for this trade, read more at https://trades.advancedplugins.net/trades/biomes
+        - 'none' # If set to none, required profession is disabled
+      maxTradeUses: 'none' # This trade's limit per villager. Read more at https://trades.advancedplugins.net/trades/limits
+    tradeIngredients: # Items required for a trade, read more at https://trades.advancedplugins.net/configuration/items
+      # MAXIMUM OF 2 INGREDIENTS PER TRADE!
+      '1':
+        type: EMERALD
+        amount: 15
+      '2':
+        type: DIAMOND_SWORD
+        amount: 1
+    tradeResult: # Item which villager will offer in exchange of trade ingredients
+      villager:
+        experience: 5 # Experience gained by villager with this trade, read more at https://trades.advancedplugins.net/trades/levels
+      item: # Item given by villager to player at trade, read more at https://trades.advancedplugins.net/configuration/items
+        type: 'DIAMOND_SWORD'
+        amount: 1
+        name: '&cCustom Sword'
+        lore:
+          - '&dExclusive from &dVillagers'
+        enchantments:
+          - 'Sharpness:5'
+          - 'Unbreaking:2'
+  'commandTrade': # Trade name, this can be anything you want
+    tradeSettings:
+      chance: 15 # Chance of villager acquiring this trade
+      requiredVillagerLevel: 'none' # Required villager level, read more at https://trades.advancedplugins.net/trades/levels
+      requiredProfession: # Required villager profession, read more at https://trades.advancedplugins.net/trades/professions
+        - 'none' # If set to none, required profession is disabled
+      requiredBiome: # Required villager's biome for this trade, read more at https://trades.advancedplugins.net/trades/biomes
+        - 'none' # If set to none, required profession is disabled
+      maxTradeUses: 'none' # This trade's limit per villager. Read more at https://trades.advancedplugins.net/trades/limits
+    tradeIngredients: # Items required for a trade, read more at https://trades.advancedplugins.net/configuration/items
+      # MAXIMUM OF 2 INGREDIENTS PER TRADE!
+      '1':
+        type: EMERALD
+        amount: 10
+      '2':
+        type: DIAMOND_SWORD
+        amount: 1
+    tradeResult: # Item which villager will offer in exchange of trade ingredients
+      villager:
+        experience: 5 # Experience gained by villager with this trade, read more at https://trades.advancedplugins.net/trades/levels
+      item: # Item will not be given when traded, if command reward is set, read more at https://trades.advancedplugins.net/configuration/commands
+            # Item will only be displayed in villager's trade menu, but not traded.
+        type: 'DIAMOND_SWORD'
+        amount: 1
+        name: '&cCommand Sword'
+        lore:
+          - '&dExclusive from &dVillagers'
+        enchantments:
+          - 'Sharpness:5'
+          - 'Unbreaking:2'
+      commands: # If command reward is set, only commands will be ran when trading,  # read more at https://trades.advancedplugins.net/configuration/commands
+        - 'give %player% diamond_sword 1 name:&cCommand_Sword'
